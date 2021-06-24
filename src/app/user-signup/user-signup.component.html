@@ -1,0 +1,54 @@
+<hr>
+<h1>Signup Here!!</h1>
+
+    <form #myForm1="ngForm">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" id="email" name="email" ngModel/>
+            </div>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" id="name" name="name" ngModel/>
+            </div>
+            <div class="form-group">
+                <label>Contact</label>
+                <input type="text" class="form-control" id="contact" name="contact" ngModel/>
+            </div>
+            <div class="form-control">
+                <label>Security Question</label>
+                <select id="sques" name="sques" ngModel>
+                    <option> ----- </option>
+                    <option>What is your favourite color?</option>
+                    <option>What is your favourite food?</option>
+                    <option>Your First School?</option>
+                    <option>Who was your first crush?</option>
+                    <option>Which city is your hometown?</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Security Answer</label>
+                <textarea class="form-control" id="sans" name="sans" ngModel></textarea>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-control">
+                <label>Gender</label>
+                <input type="radio" name="gender" id="rbm" value="male" ngModel> Male
+                <input type="radio" name="gender" id="rbf" value="female" ngModel> Female
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" id="password" name="password" ngModel />
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" class="form-control" id="cpass" name="cpass" ngModel />
+                <label id="lb3"></label>
+                <label id="lb2"></label>
+            </div>
+        </div>
+    </form>
+    <div class="form-group">
+        <button type="button" class="btn btn-block btn-primary" (click)="addUser(myForm1.value)"> Signup</button>    
+    </div>
